@@ -17,11 +17,11 @@ body{
 
 .titulo {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .titulo span{
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .bg-azul{
@@ -29,19 +29,15 @@ body{
 }
 
 .contenedor{
-    width: 60rem;
+    max-width: 120rem;
     margin: auto;
 }
 
-.navegacion{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
 .navegacion a{
+    display: block;
+    text-align: center;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.4rem;
     color: var(--blanco);
     font-weight: bold;
@@ -52,6 +48,44 @@ body{
     color: var(--oscuro);
 }
 
-@media(min-width:480px){
-
+@media ( min-width: 480px ) {
+    .navegacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+}
+
+.hero__contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__titulo{
+    color: var(--blanco);
+}
+
+.hero__parrafo{
+    color: var(--blanco);
+}
+
+.boton{
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: var(--secundario);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.2rem;
+}
+
