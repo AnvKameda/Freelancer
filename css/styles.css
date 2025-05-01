@@ -6,8 +6,10 @@
     --gris: #757575;
 }
 
+/*Global*/
+
 html {
-    font-size: 16px;
+    font-size: 62.5%;
     box-sizing: border-box;
 }
 
@@ -18,18 +20,43 @@ html {
 }
 
 body {
-    font-size: 62.5%;
+    font-size: 16px;
     font-family: 'Krub', sans-serif;
 }
 
+/*Tipografia*/
+
+h1{
+    font-size: 2.8rem;
+}
+
+h2{
+    font-size: 2.35rem;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--secundario);
+}
+
+/*Utilidades*/
+.no-border{
+    border: none;
+}
+
+/*Header*/
+
 .titulo {
     text-align: center;
-    font-size: 1.8rem;
 }
 
 .titulo span {
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
+
+/*Barra de navegacion*/
 
 .bg-azul {
     background-color: var(--secundario);
@@ -37,15 +64,16 @@ body {
 
 .contenedor {
     max-width: 120rem;
-    margin: auto;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .navegacion a {
     display: block;
     text-align: center;
     text-decoration: none;
-    font-size: 1rem;
-    padding: 0.4rem;
+    font-size: 1.4rem;
+    padding: 0.7rem;
     color: var(--blanco);
     font-weight: bold;
 }
@@ -63,11 +91,13 @@ body {
     }
 }
 
+/*Seccion Diseño y Desarrollo Web Freenlancer*/
+
 .hero {
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 20rem;
+    height: 30rem;
 
 }
 
@@ -80,23 +110,72 @@ body {
     justify-content: center;
 }
 
-.hero__titulo {
+.hero__titulo,
+.hero__parrafo {
     color: var(--blanco);
 }
 
 .hero__parrafo {
-    color: var(--blanco);
-    font-size: 0.8rem;
-    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.6rem;
 }
 
 .boton {
     color: var(--blanco);
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: bold;
     background-color: var(--secundario);
-    padding: 0.5rem;
+    padding: 1rem 2.5rem;
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
 }
+
+/*Mis servicios*/
+
+@media ( min-width: 768px ){
+    .contenedor{
+        width: 60%;
+    }
+}
+
+.servicios{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+.servicios__seccion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.servicios__svg{
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios__parrafo{
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/*formulario*/
+
+.formulario{
+    background-color: var(--gris);
+    padding: 2rem;
+}
+
+.formulario__leyenda{
+    text-align: center;
+}
+
