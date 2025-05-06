@@ -22,28 +22,33 @@ html {
 body {
     font-size: 16px;
     font-family: 'Krub', sans-serif;
+    background: linear-gradient(var(--blanco), var(--secundario) 700%);
 }
 
 /*Tipografia*/
 
-h1{
+h1 {
     font-size: 2.8rem;
 }
 
-h2{
+h2 {
     font-size: 2.35rem;
     text-align: center;
 }
 
-h3{
+h3 {
     text-align: center;
     font-size: 1.5rem;
     color: var(--secundario);
 }
 
 /*Utilidades*/
-.no-border{
+.no-border {
     border: none;
+}
+
+.no-margin{
+    margin: 0;
 }
 
 /*Header*/
@@ -64,7 +69,7 @@ h3{
 
 .contenedor {
     max-width: 120rem;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -133,19 +138,34 @@ h3{
 
 /*Mis servicios*/
 
-@media ( min-width: 768px ){
-    .contenedor{
+@media (min-width: 768px) {
+    .contenedor {
         width: 60%;
     }
 }
 
-.servicios{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 3rem;
+.shadow-box {
+    box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.4);
 }
 
-.servicios__seccion{
+@media ( min-width: 768px ){
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+.servicios__medida{
+    padding: 2rem;
+    background-color: var(--blanco);
+}
+
+.servicios__titulo{
+    padding: 2rem;
+}
+
+.servicios__seccion {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,7 +173,7 @@ h3{
     gap: 1rem;
 }
 
-.servicios__svg{
+.servicios__svg {
     height: 10rem;
     width: 10rem;
     background-color: var(--primario);
@@ -163,19 +183,80 @@ h3{
     align-items: center;
 }
 
-.servicios__parrafo{
+.servicios__parrafo {
     text-align: justify;
     font-size: 1rem;
 }
 
 /*formulario*/
 
-.formulario{
+.formulario {
     background-color: var(--gris);
     padding: 2rem;
+    border-radius: 0.5rem;
 }
 
-.formulario__leyenda{
+.formulario__leyenda {
     text-align: center;
+    color: var(--primario);
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
+@media(min-width: 768px){
+    .formulario__grid{
+        display: grid;
+    }
+}
+
+.formulario__seccion{
+    margin: 1rem 0;
+}
+
+@media(min-width: 769px){
+    .formulario__seccion-doble{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .formulario__seccion{
+        display: flex;
+        align-items: center;
+    }
+
+    .formulario__seccion-doble > .formulario__seccion{
+        flex-basis: 50%;
+    }
+}
+
+.formulario__label{
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 1.4rem;
+    min-width: 7rem;
+    
+}
+
+.formulario__input{
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    width: 100%;
+    
+}
+
+.formulario__text-area{
+    height: 13rem;
+}
+
+.izquierda{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+/*Footer*/
+
+.footer{
+    text-align: center;
+    margin: 2rem 0;
+}
