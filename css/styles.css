@@ -186,6 +186,7 @@ h3 {
 .servicios__parrafo {
     text-align: justify;
     font-size: 1rem;
+    line-height: 2;
 }
 
 /*formulario*/
