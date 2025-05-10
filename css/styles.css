@@ -11,6 +11,7 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
 }
 
 *,
@@ -47,7 +48,7 @@ h3 {
     border: none;
 }
 
-.no-margin{
+.no-margin {
     margin: 0;
 }
 
@@ -55,6 +56,8 @@ h3 {
 
 .titulo {
     text-align: center;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 .titulo span {
@@ -134,6 +137,21 @@ h3 {
     padding: 1rem 2.5rem;
     border: none;
     border-radius: 0.5rem;
+    width: 95%;
+}
+
+.boton__formulario {
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer
 }
 
 /*Mis servicios*/
@@ -148,7 +166,7 @@ h3 {
     box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.4);
 }
 
-@media ( min-width: 768px ){
+@media (min-width: 768px) {
     .servicios {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -156,12 +174,12 @@ h3 {
     }
 }
 
-.servicios__medida{
+.servicios__medida {
     padding: 2rem;
     background-color: var(--blanco);
 }
 
-.servicios__titulo{
+.servicios__titulo {
     padding: 2rem;
 }
 
@@ -171,6 +189,8 @@ h3 {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 .servicios__svg {
@@ -202,62 +222,71 @@ h3 {
     color: var(--primario);
     text-transform: uppercase;
     font-weight: bold;
+
 }
 
-@media(min-width: 768px){
-    .formulario__grid{
+@media(min-width: 768px) {
+    .formulario__grid {
         display: grid;
     }
 }
 
-.formulario__seccion{
+.formulario__seccion {
     margin: 1rem 0;
 }
 
-@media(min-width: 769px){
-    .formulario__seccion-doble{
+@media(min-width: 769px) {
+    .formulario__seccion-doble {
         display: flex;
         gap: 1rem;
     }
 
-    .formulario__seccion{
+    .formulario__seccion {
         display: flex;
         align-items: center;
     }
 
-    .formulario__seccion-doble > .formulario__seccion{
+    .formulario__seccion-doble>.formulario__seccion {
         flex-basis: 50%;
     }
 }
 
-.formulario__label{
+.formulario__label {
     color: var(--blanco);
     font-weight: bold;
     font-size: 1.4rem;
     min-width: 7rem;
-    
+
 }
 
-.formulario__input{
+.formulario__input {
     padding: 0.8rem;
     font-size: 1.4rem;
     width: 100%;
-    
+
 }
 
-.formulario__text-area{
+.formulario__text-area {
     height: 13rem;
 }
 
-.izquierda{
+.posicion {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
+}
+
+@media (min-width: 769px) {
+    .posicion {
+        justify-content: end;
+    }
 }
 
 /*Footer*/
 
-.footer{
+.footer {
     text-align: center;
     margin: 2rem 0;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
